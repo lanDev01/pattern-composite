@@ -1,4 +1,21 @@
 <div class="container">
-  <button (click)="handleModalOpen()">Abrir Modal</button>
-  <app-modal [isOpen]="modalIsOpen" (close)="handleModalClose()"></app-modal>
+  <button (click)="handleModalOpen()" class="open-modal">Abrir Modal</button>
+
+  <app-modal [isOpen]="modalIsOpen">
+    <span modal-title>Composite pattern</span>
+    <span modal-content>
+      O padrão composto é um padrão de design estrutural que permite compor objetos em estruturas de
+      árvore para representar hierarquias parte-todo. O Composite permite que os clientes tratem objetos individuais e
+      composições de objetos uniformemente.
+    </span>
+    <div modal-buttons>
+      <button (click)="handleModalClose()" class="button-cancel">
+        Cancelar
+      </button>
+
+      <a href="https://refactoring.guru/design-patterns/composite" class="button" target="_blank">
+        Ver mais
+      </a>
+    </div>
+  </app-modal>
 </div>
